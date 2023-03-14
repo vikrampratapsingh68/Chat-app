@@ -38,13 +38,13 @@ io.on("connection", (socket) => {
 
     socket.emit(
       "message",
-      generatemessage("Akash sharma", "Welcomes! you to the chat app")
+      generatemessage("Vikram Pratap singh", "Welcomes! you to the chat app")
     );
     socket.broadcast
       .to(user.room)
       .emit(
         "message",
-        generatemessage("Akash sharma", user.username + " has joined the chat")
+        generatemessage("Vikram Pratap singh", user.username + " has joined the chat")
       );
     io.to(user.room).emit("roomdata", {
       room: user.room,
@@ -86,7 +86,7 @@ io.on("connection", (socket) => {
       io.to(user.room).emit(
         "message",
         generatemessage(
-          "Akash sharma",
+          "Vikram Pratap singh",
           user.username + " left the chat , daffa hogaye"
         )
       );
